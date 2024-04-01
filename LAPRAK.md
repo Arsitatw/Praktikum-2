@@ -164,7 +164,7 @@ int main() {
 }
 ```
 #### Output
-
+![(https://github.com/Arsitatw/Praktikum-2/blob/master/Screenshot%202024-04-01%20210555.png)
 
 
 ## Referensi
