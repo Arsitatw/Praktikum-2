@@ -229,7 +229,78 @@ int main()
 ```
 #### Output
 
+![Screenshot 202024-04-01 20221805](https://github.com/Arsitatw/Praktikum-2/blob/master/Screenshot%202024-04-01%20221805.png)
 
+Program tersebut adalah sebuah program dalam bahasa C++ yang meminta pengguna memasukkan ukuran tiga dimensi untuk sebuah array dan kemudian mengisi array tersebut dengan nilai yang dimasukkan oleh pengguna. Setelah itu, program akan menampilkan isi array dalam bentuk tiga dimensi.
+
+Singkatnya:
+
+- Program meminta pengguna untuk memasukkan ukuran array tiga dimensi x_size, y_size, dan z_size.
+- Program mendeklarasikan array arr dengan ukuran yang sesuai dengan input pengguna.
+- Program mengisi array dengan nilai yang dimasukkan oleh pengguna menggunakan nested loop.
+- Program menampilkan isi array dalam bentuk tiga dimensi menggunakan nested loop.
+
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
+```C++
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+double hitungMaksimum(double arr[], int n) {
+    double maksimum = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] > maksimum) {
+            maksimum = arr[i];
+        }
+    }
+    return maksimum;
+}
+
+double hitungMinimum(double arr[], int n) {
+    double minimum = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] < minimum) {
+            minimum = arr[i];
+        }
+    }
+    return minimum;
+}
+
+double hitungRataRata(double arr[], int n) {
+    double total = 0;
+    for (int i = 0; i < n; ++i) {
+        total += arr[i];
+    }
+    return total / n;
+}
+
+int main() {
+    int n;
+    cout << "Masukkan jumlah elemen array: ";
+    cin >> n;
+
+    double arr[n];
+    for (int i = 0; i < n; ++i) {
+        cout << "Masukkan elemen ke-" << i+1 << ": ";
+        cin >> arr[i];
+    }
+
+    cout << "Array yang dimasukkan:";
+    for (int i = 0; i < n; ++i) {
+        cout << " " << arr[i];
+    }
+    cout << endl;
+
+    cout << "Nilai maksimum: " << hitungMaksimum(arr, n) << endl;
+    cout << "Nilai minimum: " << hitungMinimum(arr, n) << endl;
+    cout << "Nilai rata-rata: " << hitungRataRata(arr, n) << endl;
+
+    return 0;
+}
+```
+
+#### Output
 
 
 ## Referensi
