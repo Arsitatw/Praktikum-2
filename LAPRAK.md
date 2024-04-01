@@ -164,7 +164,72 @@ int main() {
 }
 ```
 #### Output
-![(https://github.com/Arsitatw/Praktikum-2/blob/master/Screenshot%202024-04-01%20210555.png)
+![Screenshot 202024-04-01 20210555](https://github.com/Arsitatw/Praktikum-2/blob/master/Screenshot%202024-04-01%20210555.png)
+
+Kode program ini menampilkan fungsi untuk membaca dan menampilkan elemen-elemen array dari input pengguna. Program menggunakan stringstream untuk membaca dan memisahkan elemen array yang dipisahkan oleh koma. while (ss >> temp) digunakan untuk membaca elemen-elemen array yang ganjil dan genap. if (temp % 2 != 0) digunakan untuk memeriksa apakah elemen ganjil. if (temp % 2 == 0) digunakan untuk memeriksa apakah elemen genap. Program ini akan menampilkan elemen-elemen array yang ganjil dan genap, yang dipisahkan oleh koma.
+
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
+```C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x_size, y_size, z_size;
+
+    // Meminta input ukuran array
+    cout << "Masukkan jumlah elemen array (x y z): ";
+    cin >> x_size >> y_size >> z_size;
+
+    // Deklarasi array sesuai ukuran yang dimasukkan oleh pengguna
+    int arr[x_size][y_size][z_size];
+
+    // Input elemen
+    for (int x = 0; x < x_size; x++)
+    {
+        for (int y = 0; y < y_size; y++)
+        {
+            for (int z = 0; z < z_size; z++)
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+
+    // Output Array
+    for (int x = 0; x < x_size; x++)
+    {
+        for (int y = 0; y < y_size; y++)
+        {
+            for (int z = 0; z < z_size; z++)
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+
+    // Tampilan array
+    for (int x = 0; x < x_size; x++)
+    {
+        for (int y = 0; y < y_size; y++)
+        {
+            for (int z = 0; z < z_size; z++)
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+#### Output
+
+
 
 
 ## Referensi
