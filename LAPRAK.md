@@ -301,7 +301,9 @@ int main() {
 ```
 
 #### Output
+![Screenshot 202024-04-01 20232111](https://github.com/Arsitatw/Praktikum-2/blob/master/Screenshot%202024-04-01%20232111.png)
 
+Program ini adalah sebuah program dalam bahasa C++ yang melakukan operasi statistik sederhana terhadap sebuah array bilangan floating point, termasuk perhitungan nilai maksimum, minimum, dan rata-rata dari elemen-elemennya. Untuk memastikan bahwa input pengguna adalah angka, program menggunakan cin.ignore(numeric_limits<streamsize>::max(), '\n') setelah menerima input untuk membersihkan buffer input. Program menggunakan array dinamis C++, di mana ukuran array ditentukan oleh input pengguna pada saat runtime. Ini dimungkinkan oleh fitur array variabel panjang (Variable Length Array/VLA) yang merupakan ekstensi dari standar C++ pada beberapa kompiler tertentu.
 
 ## Referensi
 [1] Arraffi, Adzriel. "Tipe data larik (array)." (2019).
